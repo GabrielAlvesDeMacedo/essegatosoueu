@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/style.css">
     <title>Esse gato sou eu!</title>
 </head>
 <body>
     <header>
-        <img src="" alt="logo">
-        <h1>Esse gato sou eu!</h1>
+        <img src="logo.png" alt="logo">
+        <h1>Esse gato sou eu</h1>
     </header>
     <main>
         <div class="container">
             <div class="form">
                 <form action="/" method="post">
                     <label>Informe seu nome</label>
-                    <input type="text" name="nome" required>
+                    <input type="text" name="nome" />
                     <button type="submit">Enviar</button>
                 </form>
             </div>
             <div class="gato">
                 {% if not url_imagem %}
-                    <p>Informe seu nome para ver o gato</p>
+                    <img src="..." alt="..." />
                 {% else %}
-                    <img src="{{ url_imagem }}" alt="Gato">
+                    <img src="{{url_imagem}}" />
                     <p>{{ nome }}</p>
                 {% endif %}
                 {% if erro %}
@@ -34,7 +34,7 @@
         </div>
     </main>
     <footer>
-        <p>Desenvolvido por: Gabriel Alves</p>
+        <p>Desenvolvido por Gabriel Alves.</p>
     </footer>
 </body>
 </html>
